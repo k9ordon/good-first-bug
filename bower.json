@@ -1,0 +1,23 @@
+{
+  "name": "good-first-bug",
+  "version": "0.0.0",
+  "homepage": "https://github.com/k9ordon/good-first-bug",
+  "authors": [
+    "Klemens Gordon <github@k94n.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ember-data": "~0.0.14",
+    "ember": "~1.4.0"
+  },
+  "resolutions": {
+    "ember": "~1.4.0"
+  }
+}
