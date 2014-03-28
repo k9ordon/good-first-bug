@@ -15,7 +15,8 @@
   ],
   "dependencies": {
     "ember-data": "~0.0.14",
-    "ember": "~1.4.0"
+    "ember": "~1.4.0",
+    "bootstrap": "git@github.com:deltaepsilon/bootstrap-square-ui.git#master"
   },
   "resolutions": {
     "ember": "~1.4.0"

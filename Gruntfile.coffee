@@ -5,7 +5,7 @@ module.exports = ->
 	@initConfig
 
 		jshint:
-			files: ["backbone.layoutmanager.js","node/index.js"]
+			files: ["js/_*.js"]
 			options:
 				browser: true
 				boss: true
@@ -22,6 +22,12 @@ module.exports = ->
 			buildHtml:
 				src: 'index.html', dest: 'dist/index.html'
 
+		less:
+			build:
+				files:
+					'.tmp/build_less/bootstrap.css': 'bower_components/bootstrap/less/bootstrap.less',
+					'.tmp/build_less/app.css': 'less/app.less'
+
 		connect:
 			server:
 				options:
@@ -35,6 +41,7 @@ module.exports = ->
 	@loadNpmTasks "grunt-contrib-cssmin"
 	@loadNpmTasks "grunt-contrib-uglify"
 
+	@loadNpmTasks "grunt-contrib-less"
 	@loadNpmTasks "grunt-contrib-jshint"
 	@loadNpmTasks "grunt-contrib-connect"
 	@loadNpmTasks "grunt-usemin"
@@ -42,9 +49,10 @@ module.exports = ->
 
 	@registerTask "build", [
 		"copy:buildHtml",
+		"less",
 		"useminPrepare",
 		"concat",
-	#	"cssmin",
+		"cssmin",
 		"uglify",
 		"usemin"
 	]
