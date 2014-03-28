@@ -1,7 +1,7 @@
 # http://tbranyen.com/post/coffeescript-has-the-ideal-syntax-for-configurations
+
 module.exports = ->
 
-	# Initialize the configuration.
 	@initConfig
 
 		jshint:
@@ -35,17 +35,14 @@ module.exports = ->
 					base: 'dist',
 					keepalive: true
 
-	# Load external Grunt task plugins.
 	@loadNpmTasks "grunt-contrib-copy"
 	@loadNpmTasks "grunt-contrib-concat"
 	@loadNpmTasks "grunt-contrib-cssmin"
 	@loadNpmTasks "grunt-contrib-uglify"
-
 	@loadNpmTasks "grunt-contrib-less"
 	@loadNpmTasks "grunt-contrib-jshint"
 	@loadNpmTasks "grunt-contrib-connect"
 	@loadNpmTasks "grunt-usemin"
-
 
 	@registerTask "build", [
 		"copy:buildHtml",
