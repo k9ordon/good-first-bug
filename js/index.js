@@ -82,7 +82,7 @@ App.IndexRoute = Ember.Route.extend({
 App.IssuesRoute = Ember.Route.extend({
 	model: function(params) {
 		return new Ember.RSVP.Promise(function(resolve, reject) {
-		App.Adapter.ajax('/search/issues?q=label:"good first bug"+language:javascript+state:open&sort=created&order=asc').then(function(data) {
+		App.Adapter.ajax('/search/issues?q=label:"good first bug"+language:javascript+state:open&sort=created&order=asc&page=1&per_page=40').then(function(data) {
 			resolve(App.IssuesList.createRecord(data));
 		}, function(error) {
 			reject(error);
