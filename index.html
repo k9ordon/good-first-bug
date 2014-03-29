@@ -13,9 +13,9 @@
 
 	<script>
 
-		if(window.location.hostname !== '0.0.0.0' &&
-			window.location.hostname !== 'goodfirstbug.com' &&
-			window.location.pathname.indexOf('/app') !== 0) {
+		if(window.location.hostname !== '0.0.0.0' && (
+			window.location.hostname !== 'goodfirstbug.com' || 
+			window.location.pathname.indexOf('/app') !== 0)) {
 			window.location.replace("http://goodfirstbug.com/app");
 		}
 	</script>
