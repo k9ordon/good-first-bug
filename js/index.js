@@ -72,12 +72,13 @@ App.Router.map(function() {
 		//this.resource('bug', { path: ':slug' }, function() {});
 	});
 });
-
+/*
 if (window.history && window.history.pushState) {
     App.Router.reopen({
       location: 'history'
     });
 }
+*/
 
 App.IndexRoute = Ember.Route.extend({
 	beforeModel: function() {
