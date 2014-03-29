@@ -13,14 +13,14 @@ module.exports = ->
 		useminPrepare:
 			html: 'index.html',
 			options:
-				dest: 'dist'
+				dest: 'app'
 
 		usemin:
-			html: ['dist/index.html']
+			html: ['app/index.html']
 
 		copy:
 			buildHtml:
-				src: 'index.html', dest: 'dist/index.html'
+				src: 'index.html', dest: 'app/index.html'
 
 		less:
 			build:
@@ -32,7 +32,7 @@ module.exports = ->
 			server:
 				options:
 					port: 9001,
-					base: 'dist',
+					base: 'app',
 					keepalive: true
 
 	@loadNpmTasks "grunt-contrib-copy"

@@ -11,6 +11,15 @@
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
+	<script>
+
+		if(window.location.hostname !== '0.0.0.0' &&
+			window.location.hostname !== 'goodfirstbug.com' &&
+			window.location.pathname.indexOf('/app') !== 0) {
+			window.location.replace("http://goodfirstbug.com/app");
+		}
+	</script>
+
 	<!-- build:js lib.js -->
 	<script src="bower_components/jquery/jquery.min.js"></script>
 	<script src="bower_components/handlebars/handlebars.js"></script>
