@@ -59,12 +59,18 @@
 				{{#each issues}}
 						<div class="item-card menu background-color-000">
 							<div class="callout">
+
 								<p>{{repoOwnerId}}/{{repoId}}</p>
+
 								<h4 class="light-text">{{title}}</h4>
 
 								<p>
+									<a class="tag tag-padded background-color-1 light-text" {{bind-attr href='githubUrl'}}>
+										open
+									</a>
+
 									{{#each labels}}
-										<div class="tag tag-padded background-color-3 light-text">{{name}}</div>
+										<span class="tag tag-padded background-color-3 light-text">{{name}}</span>
 									{{/each}}
 								</p>
 
